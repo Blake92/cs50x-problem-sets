@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: sort1 is on average over 2 times slower than the second slowest program at sorting a random array. We can safely assume it's using bubble sort since it's the slowest of the 3 algorithms to sort a random array.
+
+sort2 uses: Merge Sort
+
+How do you know?: sort 2 parses a large array file in milliseconds and is by far the fastest, therefore we can safely assume is using Merge sort since it's the fastest algortihm to parse a random array.
+
+sort3 uses: Selection Sort
+
+How do you know?: It's by far the slowest at parsing an already sorted algorithm. We can safely assume it's using Selection Sort since it's the only algorithm that takes a quadratic time to parse an array in the best case scenario.
