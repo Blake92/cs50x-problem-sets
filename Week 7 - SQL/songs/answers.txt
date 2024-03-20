@@ -1,0 +1,3 @@
+I would characterize it by finding the average levels of each stat and then create the "Aura" by using the 2 hgihest moods.
+Of course it wouldn't be that accurate because a person can listen to a lot of songs with a low score in one mood only to be passed by a few songs with a very high level in another mood.
+
