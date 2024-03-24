@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+            <script>
+                 document.addEventListener('DOMContentLoaded', function() {
+
+                // Get all elements with class "correct"
+                let corrects = document.querySelectorAll('.correct');
+
+                // Add event listeners to each correct button
+                for (let i = 0; i < corrects.length; i++) {
+                corrects[i].addEventListener('click', function() {
+
+
+                // Set background color to green
+                corrects[i].style.backgroundColor = 'Green';
+
+                // Go to parent element of correct button and find the first element with class "feedback" which has that parent
+                corrects[i].parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+            });
+            }
+
+// When any incorrect answer is clicked, change color to red.
+let incorrects = document.querySelectorAll(".incorrect");
+for (let i = 0; i < incorrects.length; i++) {
+    incorrects[i].addEventListener('click', function() {
+
+        // Set background color to red
+        incorrects[i].style.backgroundColor = 'Red';
+
+        // Go to parent element of correct button and find the first element with class "feedback" which has that parent
+        incorrects[i].parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+    });
+}
+
+// Check free response submission
+document.querySelector('#check').addEventListener('click', function() {
+    let input = document.querySelector('input');
+    if (input.value === 'no') {
+        input.style.backgroundColor = 'green';
+        input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+    }
+    else {
+        input.style.backgroundColor = 'red';
+        input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+    }
+});
+});
+            </script>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3> What is the biggest thing in the world?</h3>
+                <button class = "incorrect"> a mountains?</button>
+                <button class = "incorrect"> a sky?</button>
+                <button class = "incorrect"> a windmill?</button>
+                <button class = "correct"> NO</button>
+                <p class="feedback"></p>
+                <!-- TODO: Add multiple choice question here -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>is HTML a programming language?</h3>
+                <input type="text"></input>
+                <button id="check">Check Answer</button>
+                <p class="feedback"></p>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>
